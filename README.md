@@ -8,7 +8,7 @@ A Svelte-based movie review application that allows users to browse movies, read
 - [Components](#components)
 - [Pages](#pages)
 - [Stores](#stores)
-- [Features](#features)
+
 
 
 
@@ -33,24 +33,27 @@ npm run dev -- --open
 
 ## Project Structure
 ```plaintext
+
 cinevault/
 ├── src/
-│ ├── lib/
-│ │ ├── components/
-│ │ │ ├── MovieCard.svelte
-│ │ │ └── ReviewForm.svelte
-│ │ ├── data/
-│ │ │ └── movies.ts
-│ │ ├── stores/
-│ │ │ └── movieStore.ts
-│ │ └── types/
-│ │  └── index.ts
-│ ├── routes/
-│ │ ├── +page.svelte
-│ │ └── movie/[id]/+page.svelte
-│ └── app.scss
-├── static/
-└── package.json
+│   ├── lib/
+│   │   ├── components/
+│   │   │   ├── MovieCard.svelte    # Individual movie card component
+│   │   │   └── ReviewForm.svelte   # Form for submitting reviews
+│   │   ├── stores/
+│   │   │   └── movieStore.ts       # Central state management
+│   │   └── types/
+│   │       └── index.ts            # TypeScript interfaces
+│   ├── routes/
+│   │   ├── +layout.svelte         # Main layout with navigation
+│   │   ├── +page.svelte           # Home page with movie grid
+│   │   └── movie/
+│   │       └── [id]/
+│   │           └── +page.svelte    # Individual movie detail page
+│   ├── app.html                    # Base HTML template
+│   └── app.scss                    # Global styles
+├── static/                         # Static assets
+└── configuration files            # Various config files
 ```  
 ## Components
 
@@ -89,27 +92,7 @@ Central state management with features:
 - Search functionality
 
 
-## Features
 
-1. Movie Browsing
-   - Grid layout
-   - Search functionality
-   - Filtering options
-
-2. Review System
-   - Star ratings
-   - Comment system
-   - Real-time updates
-
-3. UI/UX
-   - Responsive design
-   - Dark theme
-   - Smooth animations
-
-4. Technical
-   - TypeScript support
-   - SCSS styling
-   - State management
 
 
 
