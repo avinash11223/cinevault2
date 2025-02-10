@@ -38,12 +38,19 @@
 
 <form on:submit|preventDefault={handleSubmit} class="review-form">
   <div class="rating-input">
-    <label>Rating:</label>
-    <div class="star-rating">
+    <label for="star-rating">Rating:</label>
+    <div 
+      id="star-rating" 
+      class="star-rating" 
+      role="radiogroup" 
+      aria-label="Rating"
+    >
       {#each Array(5) as _, i}
         <button 
           type="button"
           class="star-btn"
+          role="radio"
+          aria-checked={rating === i + 1}
           on:click={() => handleStarClick(i + 1)}
           on:mouseenter={() => handleStarHover(i + 1)}
           on:mouseleave={handleStarLeave}

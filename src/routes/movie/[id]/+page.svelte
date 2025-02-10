@@ -40,13 +40,26 @@
       </div>
       
       {#if showReviewModal}
-        <div class="modal-overlay" on:click={toggleReviewModal}>
-          <div class="modal" on:click|stopPropagation>
-            <button class="close-btn" on:click={toggleReviewModal}>×</button>
-            <h3>Write a Review</h3>
+        <dialog 
+          class="modal-overlay" 
+          on:close={toggleReviewModal}
+          open
+        >
+          <div 
+            class="modal" 
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modal-title"
+          >
+            <button 
+              class="close-btn" 
+              on:click={toggleReviewModal} 
+              aria-label="Close modal"
+            >✖</button>
+            <h3 id="modal-title">Write a Review</h3>
             <ReviewForm {movieId} on:submitted={toggleReviewModal} />
           </div>
-        </div>
+        </dialog>
       {/if}
 
       <div class="review-list">

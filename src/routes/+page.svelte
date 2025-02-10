@@ -52,18 +52,18 @@
   }
 
   .search-container {
-    max-width: 800px; // Increased width
+    max-width: 800px;
     margin: 0 auto 2rem;
     padding: 0 1rem;
 
     input {
       width: 100%;
-      padding: 1rem 1.5rem; // Bigger padding
-      border-radius: 50px; // Rounded search bar
-      border: 2px solid #6c72cb; // Purple border
+      padding: 1rem 1.5rem;
+      border-radius: 50px;
+      border: 2px solid #6c72cb;
       background: #2d2d44;
       color: #fff;
-      font-size: 1.2rem; // Bigger font
+      font-size: 1.2rem;
       transition: all 0.3s ease;
 
       &::placeholder {
@@ -85,45 +85,5 @@
     padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
-  }
-
-  .movie-card {
-    background: #2d2d44; // Darker purple-blue for cards
-    border-radius: 12px;
-    overflow: hidden;
-    transition: transform 0.2s, box-shadow 0.2s;
-    border: 1px solid #6c72cb;
-    
-    &:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 5px 15px rgba(108, 114, 203, 0.3);
-    }
-
-    img {
-      width: 100%;
-      height: 375px;
-      object-fit: cover;
-    }
-
-    .movie-info {
-      padding: 1rem;
-
-      h2 {
-        margin: 0;
-        font-size: 1.2rem;
-        color: #fff;
-      }
-
-      .meta {
-        color: #b4b4d9;
-        font-size: 0.9rem;
-        margin: 0.5rem 0;
-      }
-
-      .rating {
-        color: #ffd700; // Brighter gold color for stars
-        font-weight: bold;
-      }
-    }
   }
 </style>
