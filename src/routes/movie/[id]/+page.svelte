@@ -84,6 +84,11 @@
     background: #1a1a2e;
     color: #fff;
     border-radius: 12px;
+
+    @media (max-width: 768px) {
+      padding: 1rem;
+      margin: 0 1rem;
+    }
   }
 
   .movie-header {
@@ -91,6 +96,16 @@
     grid-template-columns: 300px 1fr;
     gap: 2rem;
     margin-bottom: 2rem;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      
+      img {
+        max-width: 300px;
+        margin: 0 auto;
+      }
+    }
 
     img {
       width: 100%;
@@ -108,6 +123,11 @@
         gap: 1.5rem;
         color: #a0a0a0;
         margin-bottom: 1rem;
+
+        @media (max-width: 768px) {
+          flex-wrap: wrap;
+          gap: 0.75rem;
+        }
       }
 
       .rating {
@@ -158,6 +178,16 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1rem;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 1rem;
+      align-items: flex-start;
+      
+      .add-review-btn {
+        width: 100%;
+      }
+    }
   }
 
   .add-review-btn {
@@ -198,6 +228,11 @@
     h3 {
       margin-top: 0;
       margin-bottom: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      width: 95%;
+      padding: 1rem;
     }
   }
 
